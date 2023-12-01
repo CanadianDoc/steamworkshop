@@ -25,9 +25,11 @@ while True:
 
 with open('number.txt', 'w') as number_file:
     number_file.write(','.join(all_numbers))
+    number_file.write('\n')
 
 with open('name.txt', 'w') as name_file:
     formatted_names_list = ['@{};'.format(name) for name in all_formatted_names]
     name_file.write('\n'.join(formatted_names_list))
     name_file.write('\n\n')
-    name_file.write(' '.join(formatted_names_list))
+    name_file.write(''.join(formatted_names_list))
+    name_file.write('\n')
